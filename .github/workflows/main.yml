@@ -10,14 +10,14 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-      
-      - name: Call Set Output Job
-        uses: yamini9091/github-actions/.github/workflows/template.yml@main
 
   job2:
     runs-on: ubuntu-latest
     needs: job1
     steps:
+      - name: Call Set Output Job
+        uses: yamini9091/github-actions/.github/workflows/template.yml@main
+
       - name: Use Output
         run: |
           # Read the random output from the job1-level output
