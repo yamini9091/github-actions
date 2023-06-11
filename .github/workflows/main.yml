@@ -6,8 +6,10 @@ on:
 
 jobs:
   job1:
-    uses: yamini9091/github-actions/.github/workflows/template.yml@main
-    id: set_output_job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Set Output Job
+        uses: yamini9091/github-actions/.github/workflows/template.yml@main
 
   job2:
     runs-on: ubuntu-latest
