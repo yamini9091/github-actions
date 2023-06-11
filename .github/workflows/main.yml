@@ -1,5 +1,4 @@
-
-name: Call a reusable workflow and use its outputs
+name: Call a Reusable Workflow and Use Its Outputs
 
 on:
   push:
@@ -15,6 +14,6 @@ jobs:
     steps:
       - name: Use Output
         run: |
-          # Read the random output from the job-level output
-          random_string=${{ needs.set_output_job.outputs.random-output }}
+          # Read the random output from the job1-level output
+          random_string=${{ needs.job1.outputs.random-output }}
           echo "The random output is $random_string"
