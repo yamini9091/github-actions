@@ -7,6 +7,7 @@ on:
 jobs:
   job1:
     uses: yamini9091/github-actions/.github/workflows/template.yml@main
+    id: set_output_job
 
   job2:
     runs-on: ubuntu-latest
